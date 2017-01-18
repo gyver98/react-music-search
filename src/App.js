@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from './component/SearchBar/SearchBar';
 import AlbumList from './component/AlbumList/AlbumList';
+import Header from './component/Header/Header';
 import * as musicApi from './services/music';
 import './App.css';
 
@@ -27,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         <SearchBar getAlbums={this.getAlbums}/>
         <AlbumList albums={this.state.albums}/>
       </div>

@@ -16,4 +16,8 @@ const AlbumList = (props) => {
   )
 }
 
+AlbumList.propTypes = {
+  albums: React.PropTypes.array.isRequired
+}
+
 export default AlbumList;

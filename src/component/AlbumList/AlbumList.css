@@ -6,7 +6,7 @@ ul{
 }
 
 ul li{
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ccc;
 	padding: 10px;
 	overflow: hidden;
 }
@@ -21,6 +21,6 @@ ul li img{
 ul li p{
 	margin-left: 75px;
 	font-weight: bold;
-	padding-top: 12px;
+	padding-top: 6px;
 	color:#6e7a7f;
 }
