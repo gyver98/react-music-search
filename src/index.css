@@ -1,6 +1,13 @@
+html,
+  body {
+    height: 100%; /*setting this explicitly is important*/
+  }
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #E0E0E0;
-}
+    display: flex; /*flex superpowers activated! */
+    flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
+    background-color: #fff;
+    margin: 0;
+    font-family: Lato, sans-serif;
+    color: #222;
+    font-size: 0.9em;
+  }
