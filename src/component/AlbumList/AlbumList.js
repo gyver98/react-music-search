@@ -2,11 +2,16 @@ import React from 'react';
 import './AlbumList.css';
 
 const AlbumList = (props) => {
+  const albums = props.albums.map(album => 
+    <li>
+      <img src={album.images[1].url} role="presentation"/>
+      <p>{album.name}</p>
+    </li>
+  );
+
   return (
     <ul>
-      <li>Album1</li>
-      <li>Album2</li>
-      <li>Album3</li>
+      {albums}
     </ul>
   )
 }
