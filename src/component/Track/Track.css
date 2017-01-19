@@ -8,10 +8,15 @@
   flex: 0 0 33%;
 }
 
-.play-button {
+li p span {
 	border: 1px solid black;
-	font-size: 0.6em;
+	font-size: 1em;
 	padding: 3px;
+}
+
+li p span:hover {
+  background-color: yellow;
+  cursor:pointer;
 }
 
 li:nth-child(2n) {

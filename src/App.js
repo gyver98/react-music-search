@@ -13,6 +13,7 @@ class App extends Component {
       tracks: [],
       trackId: null
     }
+    this.currentPreview = null,
     this.getAlbums = this.getAlbums.bind(this);
     this.updateAlbums = this.updateAlbums.bind(this);
     this.getTracks = this.getTracks.bind(this);
@@ -42,13 +43,16 @@ class App extends Component {
   }
 
   playPreview(previewUrl) {
+    
     if(this.currentPreview) {
       const currentAudioObj = this.currentPreview;
       currentAudioObj.pause();
-    }
-    const newAudioObj = new Audio(previewUrl);
-    this.currentPreview = newAudioObj;
-    newAudioObj.play();
+      this.currentPreview = null;
+    } 
+      const newAudioObj = new Audio(previewUrl);
+      this.currentPreview = newAudioObj;
+      newAudioObj.play();
+        
   }
 
   render() {

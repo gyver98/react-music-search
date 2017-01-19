@@ -1,13 +1,16 @@
 import React from 'react';
 import './Track.css';
 import { durationDisplay } from '../../helpers';
+import { Button } from 'semantic-ui-react';
 
 const Track = (props) => {
   return (
     <li>
       <p>{props.track.track_number}.{props.track.name}</p>
       <p>{durationDisplay(props.track.duration_ms)}</p>
-      <p onClick={() => props.playPreview(props.track.preview_url)}><span class="play-button">Play</span></p>
+      <p>
+        <Button onClick={() => props.playPreview(props.track.preview_url)} icon='play' content='Play' />
+      </p>
     </li>
   );
 }
