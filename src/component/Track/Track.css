@@ -1,0 +1,19 @@
+ li {
+  display: flex;
+  padding: 0 20px;
+  min-height: 50px;  
+}
+
+ li p {
+  flex: 0 0 33%;
+}
+
+.play-button {
+	border: 1px solid black;
+	font-size: 0.6em;
+	padding: 3px;
+}
+
+li:nth-child(2n) {
+	background-color: #f2f2f2;
+}

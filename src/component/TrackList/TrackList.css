@@ -1,0 +1,5 @@
+.track-list {
+  flex: 1 0 auto;
+  list-style-type: none;
+  padding: 5px 10px 0px;
+}

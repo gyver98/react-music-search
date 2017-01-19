@@ -3,7 +3,7 @@ import Album from '../Album/Album';
 import './AlbumList.css';
 
 const AlbumList = (props) => {
-  const albums = props.albums.map(album => <Album key={album.id} album={album} />);
+  const albums = props.albums.map(album => <Album key={album.id} album={album} tracks={props.tracks} trackId={props.trackId} getTracks={props.getTracks}/>);
 
   return (
     <main>
@@ -15,7 +15,8 @@ const AlbumList = (props) => {
 }
 
 AlbumList.propTypes = {
-  albums: React.PropTypes.array.isRequired
+  albums: React.PropTypes.array.isRequired,
+  getTracks: React.PropTypes.func.isRequired
 }
 
 export default AlbumList;

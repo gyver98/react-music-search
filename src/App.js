@@ -9,10 +9,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      albums: []
+      albums: [],
+      tracks: [],
+      trackId: null
     }
     this.getAlbums = this.getAlbums.bind(this);
     this.updateAlbums = this.updateAlbums.bind(this);
+    this.getTracks = this.getTracks.bind(this);
+    this.updateTracks = this.updateTracks.bind(this);
   }
 
   getAlbums(artist) {
@@ -25,12 +29,27 @@ class App extends Component {
     })
   }
 
+  getTracks(albumId) {
+    musicApi.getTracks(albumId, this.updateTracks);
+  }
+
+  updateTracks(result) {
+    this.setState({
+      tracks: result.tracks.items,
+      trackId: result.id
+    })
+  }
+
   render() {
     return (
       <div>
         <Header />
         <SearchBar getAlbums={this.getAlbums}/>
-        <AlbumList albums={this.state.albums}/>
+        <AlbumList 
+          albums={this.state.albums} 
+          tracks={this.state.tracks} 
+          trackId={this.state.trackId} 
+          getTracks={this.getTracks}/>
       </div>
     );
   }
