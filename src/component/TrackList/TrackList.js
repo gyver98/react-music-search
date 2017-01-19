@@ -4,9 +4,9 @@ import './TrackList.css';
 
 const TrackList = (props) => {
   const tracks = props.tracks.map((track) => <Track key={track.id} track={track} />);
-
+  
   return(
-    <ul className="track-list">{tracks}</ul>
+    <ul className={ props.tracks.length > 0 ? 'track-list' : 'no-track-list' }>{tracks}</ul>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import TrackList from '../TrackList/TrackList'; 
+import './Album.css';
 
 const Album = (props) => {
   return(
-    <div>
+    <div className="album-wrapper">
       <div className="album-head">
         <img src={props.album.images[1].url} role="presentation"/>
         <section className="album-detail">

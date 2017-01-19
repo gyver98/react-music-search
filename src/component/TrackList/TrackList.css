@@ -3,3 +3,7 @@
   list-style-type: none;
   padding: 5px 10px 0px;
 }
+
+.no-track-list {
+  display: none;
+}
