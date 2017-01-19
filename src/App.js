@@ -17,6 +17,7 @@ class App extends Component {
     this.updateAlbums = this.updateAlbums.bind(this);
     this.getTracks = this.getTracks.bind(this);
     this.updateTracks = this.updateTracks.bind(this);
+    this.playPreview = this.playPreview.bind(this);
   }
 
   getAlbums(artist) {
@@ -40,6 +41,16 @@ class App extends Component {
     })
   }
 
+  playPreview(previewUrl) {
+    if(this.currentPreview) {
+      const currentAudioObj = this.currentPreview;
+      currentAudioObj.pause();
+    }
+    const newAudioObj = new Audio(previewUrl);
+    this.currentPreview = newAudioObj;
+    newAudioObj.play();
+  }
+
   render() {
     return (
       <div>
@@ -49,7 +60,8 @@ class App extends Component {
           albums={this.state.albums} 
           tracks={this.state.tracks} 
           trackId={this.state.trackId} 
-          getTracks={this.getTracks}/>
+          getTracks={this.getTracks}
+          playPreview={this.playPreview} />
       </div>
     );
   }

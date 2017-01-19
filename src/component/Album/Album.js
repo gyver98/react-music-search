@@ -17,7 +17,10 @@ const Album = (props) => {
           </div>
         </section>
       </div>
-      <TrackList tracks={props.album.id === props.trackId ? props.tracks : []} />
+      <TrackList 
+        tracks={props.album.id === props.trackId ? props.tracks : []}
+        playPreview={props.playPreview} 
+      />
     </div>
   )   
 }
