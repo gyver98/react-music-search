@@ -1,3 +1,50 @@
+main {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.album-head {
+  flex: 0 0 280px;
+  display: flex;
+  padding: 40px;
+  background-color: #4e4e4e;
+  border-bottom: 1px solid #ccc;
+}
+
+.album-detail{
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  color: #fff;
+  padding-left: 50px;
+}
+.album-detail div:nth-child(1){
+  margin-bottom: auto;
+}
+.album-detail div:nth-child(2){
+  margin-top: 0;
+}
+.album-detail div:nth-child(2) i.fa{
+  font-size: 0.9em;
+  padding: 0 0.7em;
+  font-weight: 300;
+}
+.album-detail div:nth-child(1) p:first-child{
+  font-size: 1.8em;
+  margin: 0 0 10px;
+}
+.album-detail div:nth-child(1) p:not(:first-child){
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+
 ul{
 	list-style: none;
 	width: 428px;
