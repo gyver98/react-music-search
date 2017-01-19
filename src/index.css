@@ -1,13 +1,18 @@
-html,
-  body {
-    height: 100%; /*setting this explicitly is important*/
-  }
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
 body {
-    display: flex; /*flex superpowers activated! */
-    flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
-    background-color: #fff;
-    margin: 0;
-    font-family: Lato, sans-serif;
-    color: #222;
-    font-size: 0.9em;
-  }
+	display: flex;
+	background-color: #fff;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	font-family: Lato, sans-serif;
+	color: #222;
+	font-size: 0.9em;
+}
+
