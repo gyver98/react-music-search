@@ -47,7 +47,7 @@ class App extends Component {
     if(this.currentPreview) {
       const currentAudioObj = this.currentPreview;
       currentAudioObj.pause();
-      this.currentPreview = null;
+      //this.currentPreview = null;
     } 
       const newAudioObj = new Audio(previewUrl);
       this.currentPreview = newAudioObj;
